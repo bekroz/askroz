@@ -1,0 +1,17 @@
+{
+	"name": "bekroz-bot",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"author": "BekRoz<bekrozdev@gmail.com>",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon index.js",
+		"start": "node index.js"
+	},
+	"keywords": [],
+	"license": "MIT",
+	"dependencies": {
+		"node-telegram-bot-api": "^0.57.0"
+	}
+}
