@@ -12,6 +12,7 @@
 	"keywords": [],
 	"license": "MIT",
 	"dependencies": {
+		"dotenv": "^16.0.0",
 		"node-telegram-bot-api": "^0.57.0"
 	}
 }
