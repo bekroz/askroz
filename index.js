@@ -12,13 +12,13 @@ BOT.on('message', (msg) => {
 	if (text === '/start') {
 		BOT.sendMessage(
 			chatID,
-			'Yahooo!!!!! ⚡️ \n\n AskRoz - powerful helper bot of BekRoz is now on your command. 😎 \n\n Direct contact: @bekroz'
+			'Yahooo!!!!! ⚡️ \n\nAskRoz - powerful helper bot of BekRoz is now on your command. 😎 \n\n Direct contact: @bekroz\n\nCommands you can use:'
 		);
 	}
 	if (text === '/price') {
 		BOT.sendMessage(
 			chatID,
-			'View all the prices of BekRoz in here: @bekroz_offer'
+			'@bekroz_offer - prices for projects and job offers'
 		);
 	}
 
@@ -32,7 +32,7 @@ BOT.on('message', (msg) => {
 	if (text === '/social') {
 		BOT.sendMessage(
 			chatID,
-			`GitHub - github.com/bekroz,\n\nLinkedIn - linkedin.com/bekroz,\n\nStackOverFlow - stackoverflow.com/bekroz`
+			`GitHub - github.com/bekroz,\n\nLinkedIn - linkedin.com/bekroz,\n\nStackOverFlow - cutt.ly/bekroz`
 		);
 	}
 
