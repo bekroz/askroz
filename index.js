@@ -5,9 +5,9 @@ const BOT = new TelegramAPI(process.env.BOT_TOKEN, {
 	polling: true,
 });
 
-let chatID;
 BOT.on('message', (msg) => {
 	const text = msg.text;
+	let chatID;
 	chatID = msg.chat.id;
 	if (text === '/start') {
 		BOT.sendMessage(
