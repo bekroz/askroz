@@ -1,7 +1,7 @@
 const TelegramAPI = require('node-telegram-bot-api');
 require('dotenv').config();
 
-const BOT = new TelegramAPI(process.env.BOT_TOKEN, {
+const BOT = new TelegramAPI(process.env.DEV_TOKEN, {
 	polling: true,
 });
 
@@ -13,17 +13,21 @@ BOT.on('message', (msg) => {
 		BOT.sendMessage(
 			chatID,
 			`Yahooo!!!!! ⚡️ \n\nAskRoz - powerful helper is now on your command. 😎 \n\nDirect contact: @bekroz\n\nCommands you can use right now:\n
-			/start => To give life to AskRoz
+			/start => Give life to AskRoz
 
-			/blog => To get list of blogs
+			/blog => Get list of blogs
 
-			/tip => To suggest tip from ST channel (Not working yet)
+			/tip => Random tip from SeniorTips
 
-			/social => To get list of social links
+			/social => Get list of social links
 
-			/price => To get price channel.
+			/work => Get portfolio channel
 
-			/stop => To kill AskRoz.
+			/price => Get price channel
+			
+			/source => Get source-code for AskRoz.
+
+			/stop => Kill AskRoz.
 			`
 		);
 	}
@@ -55,11 +59,27 @@ BOT.on('message', (msg) => {
 		);
 	}
 
-	if (text === '/stop') {
+	if (text === '/tip') {
+		const randomTipNum = Math.floor(Math.random() * 388);
+		BOT.sendMessage(
+			chatID,
+			`Tips are in BETA. Enjoy random tip from SeniorTips: \n\n
+			https://t.me/seniortips/${randomTipNum}`
+		);
+	}
+
+	if (text === '/work' || text === '/portfolio') {
+		BOT.sendMessage(chatID, '@bekroz_work - See what BekRoz is doing now');
+	}
+
+	if (text === '/stop' || text === '/kill') {
 		BOT.sendMessage(chatID, `Do you really want to kill me? 🥹`);
 	}
 
-	if (text === '/kill') {
-		BOT.sendMessage(chatID, `Do you really want to kill me? 🥹`);
+	if (text === '/source') {
+		BOT.sendMessage(
+			chatID,
+			`Here you are, buddy: \n\n 👉 github.com/bekroz/askrozbot`
+		);
 	}
 });
