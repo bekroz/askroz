@@ -12,7 +12,19 @@ BOT.on('message', (msg) => {
 	if (text === '/start') {
 		BOT.sendMessage(
 			chatID,
-			'Yahooo!!!!! ⚡️ \n\nAskRoz - powerful helper bot of BekRoz is now on your command. 😎 \n\n Direct contact: @bekroz\n\nCommands you can use:'
+			`Yahooo!!!!! ⚡️ \n\nAskRoz - powerful helper is now on your command. 😎 \n\nDirect contact: @bekroz\n\nCommands you can use right now:\n
+			/start => To give life to AskRoz
+
+			/blog => To get list of blogs
+
+			/tip => To suggest tip from ST channel (Not working yet)
+
+			/social => To get list of social links
+
+			/price => To get price channel.
+
+			/stop => To kill AskRoz.
+			`
 		);
 	}
 	if (text === '/price') {
@@ -41,5 +53,13 @@ BOT.on('message', (msg) => {
 			chatID,
 			`Dear, ${msg.from.first_name} ${msg.from.last_name}\n Contact with my owner @bekroz!`
 		);
+	}
+
+	if (text === '/stop') {
+		BOT.sendMessage(chatID, `Do you really want to kill me? 🥹`);
+	}
+
+	if (text === '/kill') {
+		BOT.sendMessage(chatID, `Do you really want to kill me? 🥹`);
 	}
 });
